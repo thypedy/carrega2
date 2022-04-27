@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .span-container {
+    width: 100px;
+    height: 100px;
+    transform: translate(-50% -50%);
+    position: absolute;
+    top: 80%;
+    left: 90%;
+  }
+  
+  span {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    animation: mover 2s infinite ease-in-out;
+  }
+  
+  .one {
+    background: #c9ba12;
+    animation-delay: -1.5s;
+  }
+  
+  .two {
+    background: #a11cc7;
+    animation-delay: -1s;
+  }
+  
+  .three {
+    background: #237ead;
+    animation-delay: -0.5s;
+  }
+  
+  .four {
+    background: #e0bcbc;
+  }
+  
+  @keyframes mover {
+    0% {
+      transform: translate(0%);
+      border-radius: 50%;
+    }
+  
+    25% {
+      transform: translate(150%) rotate(250deg) scaleX(0.6) scaleY(0.6)/*scale*/;
+      border-radius: 0%;
+    }
+  
+    50% {
+      transform: translate(150%, 150%);
+      border-radius: 50%;
+    }
+  
+    75% {
+      transform: translate(0, 150%) rotate(250deg) scaleX(0.6) scaleY(0.6)/*scale*/;
+      border-radius: 0%;
+    }
+  }
